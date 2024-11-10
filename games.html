@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondify - Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo"><a href="home.html">Bondify</a></div>
+            <ul>
+              <li><a href="home.html" class="nav-link">Home</a></li>
+              <li><a href="music.html" class="nav-link">Music</a></li>
+              <li><a href="games.html" class="nav-link">Games</a></li>
+              <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+              <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+            </ul>
+            <div class="auth-buttons" id="auth-buttons">
+              <a href="login.html" class="btn" id="login-btn">Log In</a>
+              <a href="signup.html" class="btn" id="signup-btn">Sign Up</a>
+            </div>
+            <button id="logout-btn" class="logout-btn" style="display: none;">Log Out</button>
+          </nav>
+          
+          <script>
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll(".nav-link");
+          
+            navLinks.forEach(link => {
+              if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+              }
+            });
+          </script>
+    </header>
+
+    <!-- Main Games Section -->
+    <main>
+        <section class="games-overview">
+            <h2>Fun Family Games</h2>
+            <p>Discover fun games to play with friends and family. Click on each game to learn how to play and rate your favorites!</p>
+            
+            <div class="game-container">
+                <!-- Game 1: 21 Dares -->
+                <div class="game-box" id="21dares">
+                    <h3>21 Dares</h3>
+                    <p class="game-intro">A thrilling game where players must complete dares until someone reaches 21 dares!</p>
+                    <video width="250" height="140" controls>
+                        <source src="21dares.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('21dares', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-21dares"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('21dares')">♡ Favorite</button>
+                </div>
+
+                <!-- Game 2: Crocodile (Charades) -->
+                <div class="game-box" id="crocodile">
+                    <h3>Crocodile (Charades)</h3>
+                    <p class="game-intro">Act out a word or phrase without speaking while others guess what it is.</p>
+                    <video width="250" height="140" controls>
+                        <source src="charades.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('crocodile', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-crocodile"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('crocodile')">♡ Favorite</button>
+                </div>
+
+                <!-- Game 3: Paranoia -->
+                <div class="game-box" id="paranoia">
+                    <h3>Paranoia</h3>
+                    <p class="game-intro">Ask secret questions, but the answer is revealed randomly!</p>
+                    <video width="250" height="140" controls>
+                        <source src="paranoia.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('paranoia', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-paranoia"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('paranoia')">♡ Favorite</button>
+                </div>
+
+                <!-- Game 4: Who Am I? -->
+                <div class="game-box" id="whoami">
+                    <h3>Who Am I?</h3>
+                    <p class="game-intro">Stick a note on your forehead and guess who you are based on clues.</p>
+                    <video width="250" height="140" controls>
+                        <source src="whoami.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('whoami', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-whoami"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('whoami')">♡ Favorite</button>
+                </div>
+
+                <!-- Game 5: Two Truths and a Lie -->
+                <div class="game-box" id="twotruths">
+                    <h3>Two Truths and a Lie</h3>
+                    <p class="game-intro">Tell two truths and one lie, and the group must guess which is the lie!</p>
+                    <video width="250" height="140" controls>
+                        <source src="2truths1lie.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('twotruths', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-twotruths"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('twotruths')">♡ Favorite</button>
+                </div>
+
+                <!-- Game 6: Telephone (Whisper Game) -->
+                <div class="game-box" id="telephone">
+                    <h3>Telephone (Whisper Game)</h3>
+                    <p class="game-intro">Whisper a message and see how much it changes by the time it reaches the last person.</p>
+                    <video width="250" height="140" controls>
+                        <source src="whispergame.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="rating">
+                        <label>Rate this game:</label>
+                        <select onchange="rateGame('telephone', this.value)">
+                            <option value="">Select</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 stars</option>
+                            <option value="3">3 stars</option>
+                            <option value="4">4 stars</option>
+                            <option value="5">5 stars</option>
+                        </select>
+                        <div id="rating-result-telephone"></div>
+                    </div>
+                    <button class="btn favorite-btn" onclick="favoriteGame('telephone')">♡ Favorite</button>
+              
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bondify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

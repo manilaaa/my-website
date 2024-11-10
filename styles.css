@@ -1,0 +1,1163 @@
+/* General Styles */
+body {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffd28f;
+    color: #333;
+}
+
+
+/* Sticky Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #caaa7b;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+nav ul li a.active {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+}
+/* Dropdown Menu */
+ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffebc7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul.dropdown li {
+    margin: 0;
+}
+
+ul.dropdown li a {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Bondify Logo in Cursive */
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #534331;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Auth Buttons (Top Right) */
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('family1.jpg') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to improve readability */
+    z-index: 1;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Classy and Elegant Font for Hero Title */
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Centered Auth Buttons */
+.center-auth-buttons .auth-box {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin: 0 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.center-auth-buttons .auth-box:hover {
+    background-color: #b29d7f;
+    color: #fff;
+    border-color: #b29d7f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Calendar Page */
+#calendar-page {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    color: #ddcab5;
+    margin-bottom: 30px;
+}
+
+.calendar-form {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.calendar-form label {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.calendar-form input, .calendar-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calendar-form button {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calendar-form button:hover {
+    background-color: #333;
+}
+
+ul#event-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#event-list li {
+    background-color: #F9F9F9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Pages (Sign Up / Log In) */
+.auth-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* For h5 (Sign Up / Log In Heading) */
+h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    color: #352d23;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-btn {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.auth-btn:hover {
+    background-color: #b29d7f;
+}
+
+/* Log Out Button Styling */
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: 2px solid #b29d7f;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #fff;
+    color: #b29d7f;
+    border-color: #b29d7f;
+}
+
+.welcome-logout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-logout h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #534331;
+}
+
+/* Modal Styling */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+#modal-content h4 {
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Styling for favorite game cards */
+.favorite-game-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-game-card strong {
+    color: #333;
+}
+/* General Styles */
+body {
+    font-family: 'Sans Serif', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffd28f;
+    color: #333;
+}
+
+/* Sticky Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #caaa7b;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #666;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #333;
+    background-color: #b29d7f; /* Brown box when selected */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffebc7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul.dropdown li {
+    margin: 0;
+}
+
+ul.dropdown li a {
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Bondify Logo in Cursive */
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #534331;
+    letter-spacing: 1px;
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Game Box Styling */
+.game-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Box Content */
+.game-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #534331;
+    margin-bottom: 10px;
+}
+
+.game-intro {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+/* Rating Section */
+.rating {
+    margin: 10px 0;
+}
+
+.rating label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.rating select {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+/* Main Hero Section Styling (for All Users) */
+.hero {
+    height: 100vh;
+    background: url('family1.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to improve readability */
+    z-index: 1;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Log Out Button Styling */
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown when logged in */
+}
+
+.logout-btn:hover {
+    background-color: #333;
+}
+
+/* Favorite Games Section */
+#favorite-games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+/* Main Hero Section Styling */
+.hero {
+    height: 80vh;
+    background: url('family1.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Log Out Button Styling */
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #333;
+}
+
+/* Dashboard Sections for Logged-In Users */
+.dashboard-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffebc7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease;
+}
+
+.dashboard-section h3 {
+    font-family: 'Cinzel', serif;
+    color: #534331;
+    margin-bottom: 20px;
+}
+
+/* Game Box Styling for Dashboard Sections */
+.game-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-box:hover {
+    transform: scale(1.05);
+}
+
+/* Favorite Games Cards */
+.favorite-game-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-game-card h3 {
+    font-family: 'Cinzel', serif;
+    color: #534331;
+}
+
+.favorite-game-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General Layout */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffd28f;
+    color: #333;
+}
+
+/* Hero Section Styling */
+.hero {
+    height: 80vh;
+    background: url('family1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffebc7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease;
+    text-align: center;
+}
+
+.dashboard-section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #534331;
+    margin-bottom: 10px;
+}
+
+/* Favorite Games Section */
+.favorite-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.favorite-game-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.favorite-game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-game-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.favorite-game-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    color: #534331;
+}
+
+.favorite-game-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+/* Games Section */
+.game-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.game-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.game-box:hover {
+    transform: translateY(-5px);
+}
+
+.game-box img.game-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.game-box h4 {
+    font-family: 'Cinzel', serif;
+    color: #534331;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.game-box p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Favorite Button */
+.favorite-btn {
+    background: none;
+    border: 2px solid #b29d7f;
+    color: #b29d7f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+    background-color: #b29d7f;
+    color: #fff;
+    border-color: #b29d7f;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Log Out Button Styling */
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown when logged in */
+}
+
+.logout-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Favorite Button - Hidden for non-logged-in users */
+.favorite-btn {
+    display: none; /* Hidden by default, shown only when logged in */
+    background: none;
+    border: 2px solid #b29d7f;
+    color: #b29d7f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+    background-color: #b29d7f;
+    color: #fff;
+    border-color: #b29d7f;
+}
+/* Welcome Message Styling */
+.welcome-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffebc7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.8s ease;
+}
+
+#welcome-message {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #534331;
+    margin: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Calendar Container */
+#calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#calendar div {
+    background-color: #ffebc7;
+    border: 1px solid #caaa7b;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+#calendar div.event-day {
+    background-color: #ffd28f;
+    color: #333;
+    cursor: pointer;
+}
+
+#calendar div.event-day::after {
+    content: '•';
+    color: #d9534f;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+#calendar div.today {
+    border: 2px solid #534331;
+    font-weight: bold;
+}
+
+/* Event List */
+#event-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#event-list li {
+    background-color: #ffebc7;
+    border: 1px solid #caaa7b;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Basic styling for navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu li {
+    margin-right: 20px;
+    position: relative;
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #666;
+}
+
+#nav-menu li a.active, #nav-menu li a:hover {
+    color: #333;
+    background-color: #b29d7f;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffebc7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.dropdown li {
+    padding: 10px;
+}
+
+ul.dropdown li a {
+    color: #666;
+    text-decoration: none;
+}
+
+#nav-menu li:hover ul.dropdown {
+    display: block;
+}
+
+/* Auth and Logout Buttons */
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #555;
+}
+
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: none;
+}
+
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #555;
+}
+
+.logout-btn {
+    background-color: #b29d7f;
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: none;
+}
+.logout-btn:hover {
+    background-color: #333;}nav ul li a.active {
+        background-color: #b29d7f;
+        color: #fff;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    nav ul li a.active {
+        background-color: #b29d7f;
+        color: #fff;
+        padding: 5px;
+        border-radius: 4px;
+    }
+    #calendar-container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    #calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+    }
+    
+    .day-header, .day {
+        padding: 10px;
+        border: 1px solid #caaa7b;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .day-header {
+        font-weight: bold;
+        background-color: #ffebc7;
+    }
+    
+    .day.event-day {
+        background-color: #ffd28f;
+        font-weight: bold;
+    }
+    .favorite-btn {
+        display: inline-block !important;
+        color: #333;
+        background-color: #fff;
+        padding: 8px 16px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    

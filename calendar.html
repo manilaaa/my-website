@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner - Bondify</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <div class="logo"><a href="home.html">Bondify</a></div>
+        <ul>
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="music.html" class="nav-link">Music</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+          <a href="login.html" class="btn" id="login-btn">Log In</a>
+          <a href="signup.html" class="btn" id="signup-btn">Sign Up</a>
+        </div>
+        <button id="logout-btn" class="logout-btn" style="display: none;">Log Out</button>
+      </nav>
+      
+          
+          <script>
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll(".nav-link");
+          
+            navLinks.forEach(link => {
+              if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+              }
+            });
+          </script>
+    </header>
+
+
+<!-- Main Calendar Content -->
+<div id="calendar-page">
+  <h1>Plan Your Family Event</h1>
+
+  <!-- Event Form -->
+  <form id="event-form" class="calendar-form">
+      <label for="event-name">Event Name:</label>
+      <input type="text" id="event-name" required>
+
+      <label for="event-date">Event Date:</label>
+      <input type="date" id="event-date" min="2024-11-01" max="2024-11-30" required>
+
+      <label for="event-time">Event Time:</label>
+      <input type="time" id="event-time" required>
+
+      <button type="submit" class="btn" id="add-event-button">Add Event</button>
+  </form>
+
+  <!-- November Calendar -->
+  <h2>Your November Calendar</h2>
+  <div id="calendar-container">
+      <div id="calendar">
+          <!-- Days of November -->
+          <div class="day-header">Sun</div>
+          <div class="day-header">Mon</div>
+          <div class="day-header">Tue</div>
+          <div class="day-header">Wed</div>
+          <div class="day-header">Thu</div>
+          <div class="day-header">Fri</div>
+          <div class="day-header">Sat</div>
+          <!-- November 1st starts on a Friday -->
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day"></div>
+          <div class="day">1</div>
+          <div class="day">2</div>
+          <div class="day">3</div>
+          <div class="day">4</div>
+          <div class="day">5</div>
+          <div class="day">6</div>
+          <div class="day">7</div>
+          <div class="day">8</div>
+          <div class="day">9</div>
+          <div class="day">10</div>
+          <div class="day">11</div>
+          <div class="day">12</div>
+          <div class="day">13</div>
+          <div class="day">14</div>
+          <div class="day">15</div>
+          <div class="day">16</div>
+          <div class="day">17</div>
+          <div class="day">18</div>
+          <div class="day">19</div>
+          <div class="day">20</div>
+          <div class="day">21</div>
+          <div class="day">22</div>
+          <div class="day">23</div>
+          <div class="day">24</div>
+          <div class="day">25</div>
+          <div class="day">26</div>
+          <div class="day">27</div>
+          <div class="day">28</div>
+          <div class="day">29</div>
+          <div class="day">30</div>
+      </div>
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bondify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bondify - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <!-- Placeholder for Welcome Message -->
+    <div id="welcome-container" class="welcome-container" style="display: none;">
+      <h2 id="welcome-message"></h2>
+    </div>
+    <nav>
+      <div class="logo"><a href="home.html">Bondify</a></div>
+      <ul>
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="music.html" class="nav-link">Music</a></li>
+        <li><a href="games.html" class="nav-link">Games</a></li>
+        <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+        <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+      </ul>
+      <div class="auth-buttons" id="auth-buttons">
+        <a href="login.html" class="btn" id="login-btn">Log In</a>
+        <a href="signup.html" class="btn" id="signup-btn">Sign Up</a>
+      </div>
+      <button id="logout-btn" class="logout-btn" style="display: none;">Log Out</button>
+    </nav>
+    
+    <script>
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="hero-title">Bondify</h1>
+      <p id="welcome-message">Strengthening family connections through shared experiences.</p>
+    </div>
+  </section>
+
+<!-- Other sections of your home.html, including the hero, navigation, etc. -->
+
+<!-- Favorite Games Section (Visible for Logged-in Users) -->
+<div id="home-favorites" class="dashboard-section" style="display: none;">
+  <h3>Your Favorite Games</h3>
+  <div id="favorite-games-list" class="favorite-list"></div>
+</div>
+
+<!-- Place this at the end of your body -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Function to display favorite games on the home page
+    function displayFavoritesOnHomePage() {
+      const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+      if (!loggedInUser) return; // Exit if not logged in
+
+      // Retrieve favorites for the logged-in user
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+      const userFavorites = favorites[loggedInUser.username] || [];
+
+      const favoritesContainer = document.getElementById('favorite-games-list');
+      favoritesContainer.innerHTML = ''; // Clear previous content
+
+      if (userFavorites.length === 0) {
+        favoritesContainer.innerHTML = '<p>No favorites added yet.</p>';
+        return;
+      }
+
+      // Iterate over each game ID and display on the home page
+      userFavorites.forEach((gameId) => {
+        const gameBox = document.querySelector(`#games-section .game-box#${gameId}`).cloneNode(true);
+        gameBox.querySelector('.favorite-btn').remove(); // Remove 'Favorite' button on home page
+        favoritesContainer.appendChild(gameBox);
+      });
+    }
+
+    // Check if the user is logged in and display favorites
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    const homeFavoritesSection = document.getElementById('home-favorites');
+
+    if (loggedInUser && homeFavoritesSection) {
+      homeFavoritesSection.style.display = 'block'; // Show the section if logged in
+      displayFavoritesOnHomePage();
+    }
+  });
+</script>
+
+<!-- Your existing JavaScript file link -->
+<script src="scripts.js"></script>
+</body>
+<div id="home-favorites" class="dashboard-section" style="display: none;">
+  <h3>Your Favorite Games</h3>
+  <div id="favorite-games-list" class="favorite-list">
+    
+    <!-- Game 1: Two Truths and a Lie -->
+    <div class="game-box" id="twotruths" style="display: none;">
+      <h4>Two Truths and a Lie</h4>
+      <p>Tell two truths and one lie, and the group must guess which is the lie!</p>
+      <img src="game-twotruths.jpg" alt="Two Truths and a Lie" />
+    </div>
+
+    <!-- Game 2: Who Am I? -->
+    <div class="game-box" id="whoami" style="display: none;">
+      <h4>Who Am I?</h4>
+      <p>Stick a note on your forehead and guess who you are based on clues.</p>
+      <img src="game-whoami.jpg" alt="Who Am I?" />
+    </div>
+
+    <!-- Game 3: Telephone (Whisper Game) -->
+    <div class="game-box" id="telephone" style="display: none;">
+      <h4>Telephone (Whisper Game)</h4>
+      <p>Whisper a message and see how much it changes by the time it reaches the last person.</p>
+      <img src="game-telephone.jpg" alt="Telephone (Whisper Game)" />
+    </div>
+
+    <!-- Additional game boxes here as needed -->
+
+  </div>
+</div>
+
+
+  <!-- Games to Explore and Favorite -->
+  <div id="games-section" class="dashboard-section">
+    <h3>Explore and Add to Your Favorites</h3>
+    <div class="game-box-container">
+      <!-- Example Game Boxes -->
+      <div class="game-box">
+        <img src="trivia.jpg" alt="Trivia Challenge" class="game-image">
+        <h4>Trivia Challenge</h4>
+        <p>Test your knowledge with family-friendly trivia!</p>
+        <p>How to Play Trivia:
+          Setup: Gather players (can be individuals or teams) and prepare questions on different topics (e.g., history, sports, entertainment).
+          Gameplay:
+          A host reads a question aloud, and players have limited time to answer.
+          Points are awarded for correct answers.
+          Winning: The player/team with the most points at the end wins. </p>
+        <button class="favorite-btn" data-game="Trivia Challenge">♡ Favorite</button>
+      </div>
+      <div class="game-box">
+        <img src="guessthesong.jpg" alt="Guess the Song" class="game-image">
+        <h4>Guess the Song</h4>
+        <p>Identify songs based on short clips!</p>
+        <p>How to Play Guess the Song:
+          Setup: Choose a playlist of popular songs or use a music streaming service.
+          Gameplay:
+          Play a short clip (5-10 seconds) of a song.
+          Players guess the song title and/or artist. They can shout out or write answers down.
+          Scoring: Award points for each correct guess. Bonus points can be given for correctly guessing the artist.
+          Winning: The player/team with the most points wins.</p>
+        <button class="favorite-btn" data-game="Guess the Song">♡ Favorite</button>
+      </div>
+      <div class="game-box">
+        <img src="charadess.jpg" alt="Charades" class="game-image">
+        <h4>Charades</h4>
+        <p>Act out phrases while others guess.</p>
+        <p>How to Play Charades:
+          Setup: Write down different words or phrases on pieces of paper (e.g., movies, actions, famous people).
+          Gameplay:
+          Split into teams. One player acts out the word/phrase without speaking while their team guesses.
+          Set a time limit (usually 1 minute) for each turn.
+          Rules: No speaking, pointing, or mouthing words—only actions!
+          Winning: The team with the most correct guesses after all words have been acted out wins.</p>
+        <button class="favorite-btn" data-game="Charades">♡ Favorite</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>

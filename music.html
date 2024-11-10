@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondify - Music</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffd28f;
+            color: #333;
+        }
+
+        .music-overview {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: #3e2723;
+        }
+
+        .music-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #ffdeb3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #3e2723;
+            margin-bottom: 20px;
+        }
+
+        .song-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .song-card {
+            background-color: #fdeed6;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .song-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .song-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .song-content h4 {
+            font-size: 20px;
+            color: #5d4037;
+            margin-top: 20px;
+        }
+
+        .lyrics {
+            margin: 10px 0;
+            color: #5d4037;
+            font-size: 16px;
+            white-space: pre-line;
+        }
+
+        audio {
+            margin-top: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo"><a href="home.html">Bondify</a></div>
+            <ul>
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="music.html" class="nav-link active">Music</a></li>
+                <li><a href="games.html" class="nav-link">Games</a></li>
+                <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content for Music -->
+    <main>
+        <section class="music-overview">
+            <h2>Explore Music</h2>
+            <p>Discover popular songs from different cultures. Enjoy the music and explore the lyrics and chords for each song!</p>
+
+            <!-- Russian Songs Section -->
+            <div class="music-section">
+                <h3>Russian Music</h3>
+                <div class="song-list">
+                    <!-- Song 1 -->
+                    <div class="song-card">
+                        <img src="kino.jpg" alt="Kino" class="song-img">
+                        <div class="song-content">
+                            <h4>Кино - Группа крови</h4>
+                            <p class="lyrics">
+                                <b>F#m</b>
+                                Теплое место, но улицы ждут
+                                <b>C#m</b>
+                                Отпечатков наших ног.
+                                <b>F#m</b>                  <b>E</b>
+                                Звездная пыль - на сапогах.
+
+                                <b>F#m</b>
+                                Мягкое кресло, клетчатый плед,
+                                <b>C#m</b>
+                                Не нажатый вовремя курок.
+                                <b>F#m</b>                          <b>E</b>
+                                Солнечный день - в ослепительных снах.
+
+                                Припев:
+                                <b>F#m</b>
+                                Группа крови - на рукаве,
+                                <b>C#m</b>
+                                Мой порядковый номер - на рукаве,
+                                <b>Bm</b>                                 <b>E</b>
+                                Пожелай мне удачи в бою, пожелай мне:
+                                <b>F#m</b>
+                                Не остаться в этой траве,
+                                <b>C#m</b>
+                                Не остаться в этой траве.
+                                <b>Bm</b>                         <b>E</b>            <b>F#m</b>
+                                Пожелай мне удачи, пожелай мне удачи!
+                            </p>
+                            <audio controls>
+                                <source src="kino_gruppa_krovi.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="favorite-rating">
+                              <span class="favorite"><i class="far fa-heart"></i></span>
+                              <div class="rating">
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                                  <i class="far fa-star"></i>
+                              </div>
+                          </div>
+                          
+                        </div>
+                    </div>
+                    <!-- Song 2 -->
+                    <div class="song-card">
+                        <img src="жуки.jpg" alt="Жуки" class="song-img">
+                        <div class="song-content">
+                            <h4>Жуки - Батарейка</h4>
+                            <p class="lyrics">
+                                <b>Am</b>           <b>G</b>            <b>F</b>             <b>E</b>
+                                Холодный ветер с дождем усилился стократно,
+                                <b>Am</b>       <b>G</b>         <b>F</b>                 <b>E</b>
+                                Все говорит об одном, что нет пути обратно,
+                                <b>Am</b>          <b>G</b>         <b>F</b>              <b>E</b>
+                                Что ты не мой лопушок, а я не твой Андрейка,
+                                <b>Am</b>          <b>G</b>             <b>F</b>      <b>E</b>
+                                Что y любви y нашей села батарейка.
+
+                                Припев:
+                                <b>Am</b> <b>G</b>  <b>F</b>     <b>E</b>
+                                О-оу-и-я-и-е! Батарейка
+                            </p>
+                            <audio controls>
+                                <source src="zhuki_batareika.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 3 -->
+                    <div class="song-card">
+                        <img src="нервы.jpeg" alt="Нервы" class="song-img">
+                        <div class="song-content">
+                            <h4>Нервы - Слишком Влюблен</h4>
+                            <p class="lyrics">
+                                <b>C#m</b>  <b>D#7</b> <b>G#m</b>
+                                Пойми, прошу, ты очень-очень мне нужна,
+                                <b>C#m</b>                                    <b>D#7</b>
+                                Но я живу, пока держу твою ладонь в своей руке,
+                                <b>G#m</b>
+                                И трещины на потолке
+                                <b>E</b>
+                                напоминают мне о том,
+                                <b>C#m</b>
+                                что без тебя я был никем.
+
+                                Припев:
+                                <b>C#m</b>
+                                Наверное я слишком влюблен,
+                                <b>D#7</b>                                <b>G#m</b>
+                                Я снова начал слушать Земфиру, листая твои фото в альбомах,
+                                <b>E</b>
+                                Вникая в тебя тысячи раз.
+                            </p>
+                            <audio controls>
+                                <source src="nervy_slishkom_vlyublen.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 4 -->
+                    <div class="song-card">
+                        <img src="дайтетанк.png" alt="Дайте Танк!" class="song-img">
+                        <div class="song-content">
+                            <h4>Дайте Танк! - Маленький</h4>
+                            <p class="lyrics">
+                                <b>F#m</b> | <b>E</b>
+
+                                Куплет 1:
+                                <b>F#m</b>
+                                Я снова маленький, солнце яркое,
+                                <b>E</b>
+                                Мама опять сильнее всех в мире,
+                                <b>F#m</b>
+                                Я снова боюсь собак
+                                <b>E</b>
+                                И оставаться один в квартире,
+                                <b>Bm</b>
+                                А деревья такие большие,
+                                <b>D</b>
+                                Незнакомы плохие слова;
+                                <b>F#m</b>
+                                Поиграем в прятки?
+                                <b>E</b>
+                                Мне как раньше по пояс трава.
+
+                                Припев:
+                                <b>D</b>       <b>E</b>           <b>F#m</b>
+                                Это я не достаю до пола ногами
+                                <b>D</b>       <b>E</b>           <b>F#m</b>
+                                Или пол до моих ног не достаёт?
+                            </p>
+                            <audio controls>
+                                <source src="tank_malenkiy.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 5 -->
+                    <div class="song-card">
+                        <img src="порнофильмы.webp" alt="Порнофильмы" class="song-img">
+                        <div class="song-content">
+                            <h4>Порнофильмы - Я так соскучился</h4>
+                            <p class="lyrics">
+                                <b>Am</b> <b>F</b> <b>Dm</b> <b>E</b>
+
+                                Куплет 1:
+                                <b>Am</b>
+                                Город расколется на мириады зеркал,
+                                <b>G</b>                                                      <b>C</b>
+                                Рвутся в любовных пожарах петарды сердец,
+                                <b>Am</b>                                                 <b>Dm</b>
+                                Стенка, за стенкой - душа, за душою - тоска,
+                                <b>F</b>                          <b>A</b>#                           <b>E</b>
+                                Тянет в болотную топь заколдованных мест.
+
+                                Припев:
+                                <b>Am</b>              <b>F</b>
+                                Дайте мне белые крылья,
+                                <b>C</b>                <b>E</b>
+                                Я утопаю в омуте,
+                                <b>Am</b>                <b>F</b>
+                                Через терни и провода,
+                                <b>C</b>                   <b>E</b>
+                                В небо, только б не мучатся.
+                            </p>
+                            <audio controls>
+                                <source src="pornofilmy_ya_tak_soskuchilsya.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <!-- English Songs Section -->
+            <div class="music-section">
+                <h3>English Music</h3>
+                <div class="song-list">
+                    <!-- Song 1 -->
+                    <div class="song-card">
+                        <img src="vancejoy.jpg" alt="Vance Joy" class="song-img">
+                        <div class="song-content">
+                            <h4>Vance Joy - Riptide</h4>
+                            <p class="lyrics">
+                                <b>Am</b>              <b>G</b>                <b>C</b>
+                                I was scared of dentists and the dark
+                                <b>Am</b>              <b>G</b>                 <b>C</b>
+                                I was scared of pretty girls and starting conversations
+                                <b>Am</b>          <b>G</b>              <b>C</b>
+                                Oh, all my friends are turning green
+                                <b>Am</b>          <b>G</b>                 <b>C</b>
+                                You're the magician's assistant in their dream
+
+                                Припев:
+                                <b>Am</b>    <b>G</b>                   <b>C</b>
+                                Lady, running down to the riptide
+                                <b>Am</b>
+                                Taken away to the dark side
+                                <b>G</b>               <b>C</b>
+                                I wanna be your left hand man
+                            </p>
+                            <audio controls>
+                                <source src="vance_joy_riptide.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 2 -->
+                    <div class="song-card">
+                        <img src="alecbenjamin.jpg" alt="Alec Benjamin" class="song-img">
+                        <div class="song-content">
+                            <h4>Alec Benjamin - Water Fountain</h4>
+                            <p class="lyrics">
+                                <b>C</b>
+                                She told me that she loved me by the water fountain
+                                <b>Am</b>
+                                She told me that she loved me and she didn't love him
+                                <b>G</b>
+                                And that was really lovely cause it was innocent
+                                <b>D</b>
+                                But now she's got a cup with something else in it
+
+                                Припев:
+                                <b>C</b>
+                                She couldn't be at home in the nighttime because
+                                <b>Am</b>
+                                It made her feel alone but at that time she was
+                                <b>G</b>
+                                Too young
+                                <b>D</b>
+                                I was too young
+                            </p>
+                            <audio controls>
+                                <source src="alec_benjamin_water_fountain.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 3 -->
+                    <div class="song-card">
+                        <img src="neighbourhood.jpeg" alt="The Neighbourhood" class="song-img">
+                        <div class="song-content">
+                            <h4>The Neighbourhood - Sweater Weather</h4>
+                            <p class="lyrics">
+                                <b>C</b>      <b>Am</b>
+                                All I <b>Am</b> is a man
+                                <b>Em</b>          <b>G</b>
+                                I want the world in my hands
+                                <b>C</b>
+                                I hate the beach
+                                <b>Am</b>      <b>Em</b>
+                                But I stand in California
+                                <b>G</b>
+                                with my toes in the sand
+
+                                Припев:
+                                <b>C</b>    <b>Am</b>
+                                'Cause it's too cold whoa
+                                <b>Em</b>
+                                For you here
+                                <b>G</b>
+                                And now
+                            </p>
+                            <audio controls>
+                                <source src="neighbourhood_sweater_weather.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 4 -->
+                    <div class="song-card">
+                        <img src="billieeilish.webp" alt="Billie Eilish" class="song-img">
+                        <div class="song-content">
+                            <h4>Billie Eilish - Ocean Eyes</h4>
+                            <p class="lyrics">
+                                <b>C</b> <b>D</b> <b>Em</b>
+
+                                Куплет 1:
+                                <b>C</b>    <b>D</b>    <b>Em</b>           <b>C</b>   <b>D</b>    <b>Em</b>
+                                I’ve been watching you for some time
+                                <b>C</b>     <b>D</b>    <b>Em</b>               <b>G</b>     <b>C</b>
+                                Can’t stop staring at those ocean eyes
+
+                                Припев:
+                                <b>C</b> <b>D</b> <b>Em</b>  <b>C</b> <b>D</b> <b>Em</b>
+                                No fair
+                                <b>C</b>           <b>D</b>       <b>Em</b>
+                                You really know how to make me cry
+                            </p>
+                            <audio controls>
+                                <source src="billie_eilish_ocean_eyes.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 5 -->
+                    <div class="song-card">
+                        <img src="shilohdynasty.jpg" alt="Shiloh Dynasty" class="song-img">
+                        <div class="song-content">
+                            <h4>Shiloh Dynasty - I'll keep you safe</h4>
+                            <p class="lyrics">
+                                <b>Cm7</b>    <b>Gm9</b>
+
+                                Припев:
+                                <b>Cm7</b>                 <b>Gm9</b>
+                                I'll keep you safe in these arms of mine
+                                <b>Cm7</b>              <b>Gm9</b>
+                                Hold on to me, pretty baby
+                                <b>Dm7</b>
+                                And you'll see
+                            </p>
+                            <audio controls>
+                                <source src="shiloh_dynasty_ill_keep_you_safe.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pamiri Songs Section -->
+            <div class="music-section">
+                <h3>Pamiri Music</h3>
+                <div class="song-list">
+                    <!-- Song 1 -->
+                    <div class="song-card">
+                        <img src="тфкпшы.jpg" alt="Nargis Bandishoeva" class="song-img">
+                        <div class="song-content">
+                            <h4>Nargis Bandishoeva - Joni Man</h4>
+                            <p class="lyrics">
+                                <b>Em</b>
+                                Ман дигар танҳо наям
+                                <b>Am</b>
+                                Байни замину осмон
+                                <b>Dm</b>
+                                Ман дигар мавзун наям
+                                <b>Em</b>
+                                Бо хандаҳои хамаён
+
+                                Припев:
+                                <b>D</b>                  <b>Em</b>
+                                Ҷони ман, омади,
+                                <b>D</b>                 <b>C</b>     <b>Em</b>
+                                Сад сол гар дер омади
+                            </p>
+                            <audio controls>
+                                <source src="nargis_bandishoeva_joni_man.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 2 -->
+                    <div class="song-card">
+                        <img src="safarmuhammad.jpg" alt="Safarmuhammad" class="song-img">
+                        <div class="song-content">
+                            <h4>Safarmuhammad - Shabho</h4>
+                            <p class="lyrics">
+                                <b>Am</b> <b>C</b> <b>G</b> <b>Dm</b>
+
+                                Припев:
+                                <b>Am</b>                       <b>C</b>
+                                Shabho ba yodi tu
+                                <b>G</b>
+                                Dil nola mekunad,
+                                <b>Dm</b>                             <b>Am</b>
+                                Ashki maro kator chun zhola mekunad.
+                            </p>
+                            <audio controls>
+                                <source src="safarmuhammad_shabho.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+                          <span class="favorite"><i class="far fa-heart"></i></span>
+                          <div class="rating">
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    <!-- Song 3 -->
+                    <div class="song-card">
+                        <img src="sashzaifi.jpeg" alt="Pamiri Song" class="song-img">
+                        <div class="song-content">
+                            <h4>Sash Zaifi - 40 nafar</h4>
+                            <p class="lyrics">
+                                <b>Em</b>               <b>D</b>                <b>Em</b>
+                                Mash khu shamsheren nathothjam ar gulof
+                                <b>C</b>              <b>D</b>                  <b>G</b>
+                                Az khu vorgen tir khalosam jil nachughj
+                                <b>Am</b>           <b>C</b>              <b>Em</b>
+                                Yo Ali masham navad az chil ziyod
+                                <b>D</b>               <b>C</b>                  <b>Em</b>
+                                Dukhmanam mis kam yi ruz az chil nachud
+                            </p>
+                            <audio controls>
+                                <source src="pamiri_song_3.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="favorite-rating">
+    <span class="favorite"><i class="far fa-heart"></i></span>
+    <div class="rating">
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+    </div>
+</div>
+
+                    </div>
+                   
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function() {
+                          const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+                          const ratings = JSON.parse(localStorage.getItem('ratings')) || {};
+                  
+                          // Favorite functionality
+                          document.querySelectorAll('.favorite').forEach((favoriteBtn) => {
+                              const songTitle = favoriteBtn.closest('.song-card').querySelector('h4').innerText;
+                  
+                              if (favorites.includes(songTitle)) {
+                                  favoriteBtn.querySelector('i').classList.remove('far');
+                                  favoriteBtn.querySelector('i').classList.add('fas');
+                              }
+                  
+                              favoriteBtn.addEventListener('click', () => {
+                                  const icon = favoriteBtn.querySelector('i');
+                                  if (icon.classList.contains('far')) {
+                                      icon.classList.remove('far');
+                                      icon.classList.add('fas');
+                                      favorites.push(songTitle);
+                                  } else {
+                                      icon.classList.remove('fas');
+                                      icon.classList.add('far');
+                                      const index = favorites.indexOf(songTitle);
+                                      if (index > -1) {
+                                          favorites.splice(index, 1);
+                                      }
+                                  }
+                                  localStorage.setItem('favorites', JSON.stringify(favorites));
+                              });
+                          });
+                  
+                          // Rating functionality
+                          document.querySelectorAll('.rating').forEach((ratingContainer) => {
+                              const songTitle = ratingContainer.closest('.song-card').querySelector('h4').innerText;
+                              const savedRating = ratings[songTitle] || 0;
+                  
+                              // Display saved rating
+                              if (savedRating > 0) {
+                                  for (let i = 0; i < savedRating; i++) {
+                                      ratingContainer.children[i].classList.add('fas');
+                                      ratingContainer.children[i].classList.remove('far');
+                                  }
+                              }
+                  
+                              ratingContainer.querySelectorAll('i').forEach((star, starIndex) => {
+                                  star.addEventListener('click', () => {
+                                      // Clear previous rating
+                                      ratingContainer.querySelectorAll('i').forEach(s => {
+                                          s.classList.remove('fas');
+                                          s.classList.add('far');
+                                      });
+                  
+                                      // Set new rating
+                                      for (let i = 0; i <= starIndex; i++) {
+                                          ratingContainer.children[i].classList.add('fas');
+                                          ratingContainer.children[i].classList.remove('far');
+                                      }
+                  
+                                      // Save rating
+                                      ratings[songTitle] = starIndex + 1;
+                                      localStorage.setItem('ratings', JSON.stringify(ratings));
+                                  });
+                              });
+                          });
+                      });
+                  </script>
+                  

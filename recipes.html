@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondify - Recipes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+      
+
+        .logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .auth-buttons .btn {
+            background-color: #3e2723;
+            color: #fff;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .auth-buttons .btn:hover {
+            background-color: #795548;
+        }
+
+        .recipes-overview {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 36px;
+            color: #3e2723;
+        }
+
+        p {
+            font-size: 18px;
+            color: #5d4037;
+        }
+
+        .cuisine-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #ffecb3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #3e2723;
+            margin-bottom: 20px;
+        }
+
+        .recipe-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .recipe-content h4 {
+            font-size: 20px;
+            color: #5d4037;
+            margin-top: 20px;
+        }
+
+        ol {
+            margin-left: 20px;
+            color: #5d4037;
+        }
+
+        .favorite-btn {
+            background-color: #ffb74d;
+            color: #3e2723;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .favorite-btn:hover {
+            background-color: #ff8f00;
+            color: #fff;
+        }
+
+        .rating {
+            margin-top: 15px;
+        }
+
+        .rating label {
+            font-weight: bold;
+            color: #3e2723;
+            margin-right: 10px;
+        }
+
+        .rating select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #795548;
+        }
+
+        footer {
+            background-color: #3e2723;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header>
+      <nav>
+        <div class="logo"><a href="home.html">Bondify</a></div>
+        <ul>
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="music.html" class="nav-link">Music</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+          <a href="login.html" class="btn" id="login-btn">Log In</a>
+          <a href="signup.html" class="btn" id="signup-btn">Sign Up</a>
+        </div>
+        <button id="logout-btn" class="logout-btn" style="display: none;">Log Out</button>
+      </nav>
+    </header>
+
+    <!-- Main Content for Recipes -->
+    <main>
+      <section class="recipes-overview">
+          <h2>Explore Recipes</h2>
+          <p>Discover delicious family recipes from different cultures. Favorite your top picks and rate each recipe!</p>
+
+          <!-- Recipe Sections -->
+          <div class="recipe-categories">
+              <!-- Recipe 1: Blini -->
+              <div class="recipe-card">
+                  <img src="blini.jpg" alt="Blini" class="recipe-img">
+                  <div class="recipe-content">
+                      <h3>Blini (Russian Crepes)</h3>
+                      <p>These large, thin pancakes are perfect for pairing with sweet or savory toppings.</p>
+                      <h4>Instructions:</h4>
+                      <ol>
+                          <li>In a bowl, whisk together the milk, eggs, sugar, and salt.</li>
+                          <li>Gradually add the flour, mixing until smooth and lump-free.</li>
+                          <li>Stir in the melted butter or oil.</li>
+                          <li>Heat a non-stick pan over medium heat and lightly grease with butter.</li>
+                          <li>Pour a small amount of batter into the pan, swirling to cover the surface.</li>
+                          <li>Cook for 1-2 minutes until edges lift, then flip and cook for another minute.</li>
+                          <li>Serve with jam, sour cream, or condensed milk. Enjoy!</li>
+                      </ol>
+                      <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+                      <div class="rating">
+                          <label for="rating-blini">Rate this recipe:</label>
+                          <select id="rating-blini">
+                              <option value="">Rate...</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+ <!-- Recipe 2: Olivier -->
+ <div class="recipe-card">
+  <img src="olivier.jpeg" alt="Olivier Salad" class="recipe-img">
+  <div class="recipe-content">
+      <h3>Olivier (Russian Salad)</h3>
+      <p>A classic Russian salad with potatoes, carrots, ham, and peas, perfect for any occasion.</p>
+      <h4>Instructions:</h4>
+      <ol>
+          <li>In a large bowl, combine the potatoes, carrots, ham (or chicken), eggs, peas, and pickles.</li>
+          <li>Add the mayonnaise, and season with salt and pepper.</li>
+          <li>Mix gently until well combined.</li>
+          <li>Serve chilled, and enjoy this classic Russian salad!</li>
+      </ol>
+      <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+      <div class="rating">
+          <label for="rating-olivier">Rate this recipe:</label>
+          <select id="rating-olivier">
+              <option value="">Rate...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+      </div>
+  </div>
+</div>
+
+  <!-- Recipe 3: Borsch -->
+  <div class="recipe-card">
+    <img src="borsh.jpeg" alt="Borsch" class="recipe-img">
+    <div class="recipe-content">
+        <h3>Borsch (Beet Soup)</h3>
+        <p>A hearty beet soup with a mix of vegetables, perfect for a comforting meal.</p>
+        <h4>Instructions:</h4>
+        <ol>
+            <li>In a large pot, bring the broth to a boil and add the potato and bay leaf. Cook for 10 minutes.</li>
+            <li>Add the beets, carrot, cabbage, onion, and garlic. Simmer until vegetables are tender.</li>
+            <li>Stir in the tomato paste, and season with salt and pepper. Simmer for another 10 minutes.</li>
+            <li>Serve hot, garnished with dill or parsley and a dollop of sour cream.</li>
+        </ol>
+        <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+        <div class="rating">
+            <label for="rating-borsch">Rate this recipe:</label>
+            <select id="rating-borsch">
+                <option value="">Rate...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+            <!-- Tajik Cuisine Section -->
+            <div class="cuisine-section">
+                <h3>Tajik Cuisine</h3>
+                <div class="recipe-categories">
+  <!-- Recipe 4: Shakarob -->
+  <div class="recipe-card">
+    <img src="kurutob.jpeg" alt="Shakarob" class="recipe-img">
+    <div class="recipe-content">
+        <h3>Shakarob (Tajik Salad)</h3>
+        <p>A refreshing mix of tomatoes, cucumber, and naan bread, perfect for a hot day.</p>
+        <h4>Instructions:</h4>
+        <ol>
+            <li>In a large bowl, combine the tomatoes, cucumber, onion, and bread pieces.</li>
+            <li>Add the fresh herbs and salt to taste, then gently mix everything together.</li>
+            <li>Optional: Add a spoonful of yogurt or sour cream for a creamy texture.</li>
+            <li>Serve immediately as a light meal or side dish.</li>
+        </ol>
+        <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+        <div class="rating">
+            <label for="rating-shakarob">Rate this recipe:</label>
+            <select id="rating-shakarob">
+                <option value="">Rate...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+    <!-- Recipe 5: Mantu -->
+    <div class="recipe-card">
+      <img src="mantu.jpg" alt="Mantu" class="recipe-img">
+      <div class="recipe-content">
+          <h3>Mantu (Tajik Dumplings)</h3>
+          <p>Hearty dumplings filled with ground meat, served with yogurt.</p>
+          <h4>Instructions:</h4>
+          <ol>
+              <li>Make the Dough: In a bowl, mix flour, salt, and water until a smooth dough forms. Let it rest for 15-20 minutes.</li>
+              <li>Prepare the Filling: In another bowl, mix the ground meat, onion, cumin, salt, and pepper.</li>
+              <li>Assemble Mantu: Roll the dough thin and cut it into 3-inch squares. Place a spoonful of filling in the center of each square, then fold and seal the edges to form a dumpling.</li>
+              <li>Steam: Place the mantu in a steamer, leaving space between each. Steam for 30-40 minutes until cooked through.</li>
+              <li>Serve: Top with yogurt or sour cream and garnish with fresh herbs if desired.</li>
+          </ol>
+          <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+          <div class="rating">
+              <label for="rating-mantu">Rate this recipe:</label>
+              <select id="rating-mantu">
+                  <option value="">Rate...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+              </select>
+          </div>
+      </div>
+  </div>
+ <!-- Recipe 6: Sambusa -->
+ <div class="recipe-card">
+  <img src="sambusa.jpg" alt="Sambusa" class="recipe-img">
+  <div class="recipe-content">
+      <h3>Sambusa (Tajik Pastry)</h3>
+      <p>A delicious stuffed pastry filled with ground meat, perfect as a snack or appetizer.</p>
+      <h4>Instructions:</h4>
+      <ol>
+          <li>Make the Dough: In a bowl, combine flour, salt, oil, and water, kneading until smooth. Cover and let it rest for 15-20 minutes.</li>
+          <li>Prepare the Filling: In another bowl, mix the ground meat, onion, salt, pepper, cumin, and herbs.</li>
+          <li>Assemble Sambusa: Divide the dough into small balls and roll each one into a thin circle. Place a spoonful of filling in the center, then fold the dough into a triangle shape, sealing the edges.</li>
+          <li>Bake: Preheat the oven to 375°F (190°C). Place the sambusas on a baking sheet, brush with beaten egg, and sprinkle with sesame seeds if desired. Bake for 25-30 minutes, or until golden brown.</li>
+          <li>Serve hot and enjoy these flavorful pastries!</li>
+      </ol>
+      <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+      <div class="rating">
+          <label for="rating-sambusa">Rate this recipe:</label>
+          <select id="rating-sambusa">
+              <option value="">Rate...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+            <!-- Pamiri Cuisine Section -->
+            <div class="cuisine-section">
+                <h3>Pamiri Cuisine</h3>
+                <div class="recipe-categories">
+                    <!-- Recipe 5: Osh -->
+                    <div class="recipe-card">
+                        <img src="osh.jpg" alt="Osh" class="recipe-img">
+                        <div class="recipe-content">
+                            <h3>Osh (Pamiri Plov)</h3>
+                            <p>A flavorful dish of rice and meat with carrots, garlic, and spices, perfect for a family meal.</p>
+                            <h4>Instructions:</h4>
+                            <ol>
+                                <li>Cook the Meat: In a large pot or deep skillet, heat the oil over medium heat. Add the meat and cook until browned.</li>
+                                <li>Add Vegetables: Add the onion, garlic, and carrot to the pot. Cook until the onion is translucent and the carrot is softened.</li>
+                                <li>Season and Add Rice: Stir in the tomato, cumin, salt, and pepper. Add the rice and mix well with the meat and vegetables.</li>
+                                <li>Simmer: Add enough water to cover the rice and bring to a boil. Reduce heat, cover, and let it simmer until the rice is tender and the liquid is absorbed (about 20-25 minutes).</li>
+                                <li>Serve: Fluff the rice with a fork, garnish with fresh cilantro or parsley, and serve warm.</li>
+                            </ol>
+                            <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+                            <div class="rating">
+                                <label for="rating-osh">Rate this recipe:</label>
+                                <select id="rating-osh">
+                                    <option value="">Rate...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Recipe 8: Bichak -->
+<div class="recipe-card">
+  <img src="bichak.jpg" alt="Bichak" class="recipe-img">
+  <div class="recipe-content">
+      <h3>Bichak (Pamiri Pastry)</h3>
+      <p>A versatile Pamiri pastry that can be filled with sweet or savory ingredients, perfect for any time of the day.</p>
+      <h4>Instructions:</h4>
+      <ol>
+          <li>Prepare the Dough: In a bowl, combine flour, salt, oil, and water, kneading until smooth. Cover and let it rest for 15 minutes.</li>
+          <li>Make the Filling: For savory, mix mashed potatoes with cheese, salt, and pepper. For sweet, mix the pumpkin or sweet potato with sugar and cinnamon.</li>
+          <li>Assemble Bichak: Divide the dough into small balls and roll each one into a thin circle. Place a spoonful of filling in the center, fold into a half-moon shape, and seal the edges.</li>
+          <li>Bake: Preheat the oven to 375°F (190°C). Place the bichak on a baking sheet, brush with beaten egg, and sprinkle with sesame seeds if desired. Bake for 20-25 minutes until golden.</li>
+          <li>Serve warm and enjoy these tasty Pamiri pastries!</li>
+      </ol>
+      <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+      <div class="rating">
+          <label for="rating-bichak">Rate this recipe:</label>
+          <select id="rating-bichak">
+              <option value="">Rate...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+      </div>
+  </div>
+</div>
+ <!-- Recipe 9: Shurbo -->
+ <div class="recipe-card">
+  <img src="shurbo.jpeg" alt="Shurbo" class="recipe-img">
+  <div class="recipe-content">
+      <h3>Shurbo (Pamiri Soup)</h3>
+      <p>A hearty soup made with lamb or beef, vegetables, and spices, perfect for a cozy meal.</p>
+      <h4>Instructions:</h4>
+      <ol>
+          <li>Cook the Meat: In a large pot, brown the meat over medium heat until lightly seared.</li>
+          <li>Add Vegetables: Add the onion, garlic, and tomato to the pot. Cook until the onion is translucent.</li>
+          <li>Simmer: Add the carrots, potato, bell pepper, salt, pepper, and cumin. Pour in the water or broth and bring to a boil.</li>
+          <li>Cook Until Tender: Reduce the heat, cover, and simmer for 1-1.5 hours until the meat is tender and flavors blend.</li>
+          <li>Serve: Garnish with fresh dill or cilantro and enjoy this warm, hearty soup!</li>
+      </ol>
+      <button class="favorite-btn"><i class="fa fa-star"></i> Favorite</button>
+      <div class="rating">
+          <label for="rating-shurbo">Rate this recipe:</label>
+          <select id="rating-shurbo">
+              <option value="">Rate...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bondify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
